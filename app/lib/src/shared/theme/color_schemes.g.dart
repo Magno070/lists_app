@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+part of 'themes.dart'
 
 class MaterialTheme {
   final TextTheme textTheme;
@@ -56,7 +57,7 @@ class MaterialTheme {
     );
   }
 
-  ThemeData light() {
+  ThemeData _light() {
     return theme(lightScheme());
   }
 
@@ -111,7 +112,7 @@ class MaterialTheme {
     );
   }
 
-  ThemeData dark() {
+  ThemeData _dark() {
     return theme(darkScheme());
   }
 
@@ -126,14 +127,21 @@ class MaterialTheme {
     scaffoldBackgroundColor: colorScheme.surface,
     canvasColor: colorScheme.surface,
     appBarTheme: AppBarTheme(
-      backgroundColor: colorScheme.primary, // <- usa a primary
-      foregroundColor: colorScheme.onPrimary, // <- usa o onPrimary
+      backgroundColor: colorScheme.primary,
+      foregroundColor: colorScheme.onPrimary,
       elevation: 0,
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
       titleTextStyle: textTheme.titleLarge?.copyWith(
         color: colorScheme.onPrimary,
       ),
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: colorScheme.primary,
+      foregroundColor: colorScheme.onPrimary,
+      elevation: 2,
+      shape: const StadiumBorder(),
+    ),
+    
   );
 
   List<ExtendedColor> get extendedColors => [];
