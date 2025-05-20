@@ -1,0 +1,32 @@
+name: lista_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.8
+  uno: ^1.1.12
+  result_dart: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutterando_analysis: ^0.0.2
+  mocktail: ^1.0.4
+
+
+flutter:
+
+
+  uses-material-design: true
